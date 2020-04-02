@@ -40,6 +40,10 @@ or you can run a Python script to do the same work
 ### 4. Bind Configlets to single device 'leaf1'
 Makes use of Tags to provision or rollback changes to the device.  Static list of configlets are defined in the playbook.  After each playbook is run you must go into CVP and execute the Task created for 'leaf1'.
 
+WARNING: Make sure configlets have been uploaded to CVP before proceeding.
+
+<img src="configlets.png" alt="topology" width="300"/>
+
 
 #### Run 1st to provision
 ```
