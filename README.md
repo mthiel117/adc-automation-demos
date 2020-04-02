@@ -2,11 +2,15 @@
 
 As part of the ADC, the flexibility of managing an Arista Network with CloudVision and Common DevOps Toolsets (Ansible & Python) is demonstrated with example Ansible Playbooks and Python scripts.
 
-Prior to running these playbooks, Ansible must be upgraded to latest version to support Ansible Collections.
+Prior to running these playbooks, Ansible must be upgraded to latest version to support Ansible Collections. Sudo password for user 'arista' can be found on Arista Test Drive Lab page.
+
+<img src="arista-pw.png" alt="topology" width="300"/>
+
 ```
 sudo pip install ansible --upgrade
+[sudo] password for arista: xxxxxxxx
 ```
-
+Once Ansible has been upgraded you can proceed to running the playbooks below.
 
 ### 1. Create configlets for Spine and Leafs in ther Topology from CSV (./datafiles/switch_info.csv)
 
