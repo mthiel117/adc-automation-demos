@@ -1,6 +1,14 @@
 # Automation Examples for Arista Demo Cloud (ADC)
 
-### 1. Create configlets from CSV
+As part of the ADC, the flexibility of managing an Arista Network with CloudVision and Common DevOps Toolsets (Ansible & Python) is demonstrated with example Ansible Playbooks and Python scripts.
+
+Prior to running these playbooks, Ansible must be upgraded to latest version to support Ansible Collections.
+```
+sudo pip install ansible --upgrade
+```
+
+
+### 1. Create configlets for Spine and Leafs in ther Topology from CSV (./datafiles/switch_info.csv)
 
 ```
 ansible-playbook create-configlets-from-csv.yml
@@ -25,12 +33,25 @@ or you can run a Python script to do the same work
 
 ```
 
-### 4. Bind Configlets to single device dc1-poe-leaf-sw1
+### 4. Bind Configlets to single device 'leaf1'
 Makes use of Tags to provision or rollback changes to the device.  Static list of configlets are defined in the playbook.  After each playbook is run you must go into CVP and execute the Task created for 'leaf1'.
 
+
+#### Run 1st to provision
 ```
 ansible-playbook device-configlets.yml --tags provision
-
+```
+#### Run 2nd to rollback
+```
 ansible-playbook device-configlets.yml --tags rollback
+```
+### 5. Gather info from 'spine1' with Python script
 
+```
+./spine1-info.py
+```
+### 6. Gather info from all spines and leafs with Python script
+
+```
+./net-info.py
 ```
