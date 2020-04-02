@@ -35,7 +35,6 @@ ansible-playbook configlet-uploader.yml
 or you can run a Python script to do the same work
 ```
 ./pushconfigs_to_cvp.py
-
 ```
 
 ### 4. Bind Configlets to single device 'leaf1'
