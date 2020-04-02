@@ -6,11 +6,11 @@ Connect to the 'Lab VM SSH' jumphost via SSH with username: 'arista' and your un
 
 <img src="arista-pw.png" alt="topology" width="300"/>
 
-On logging via SSH, you will land the following menu.
+After logging in via SSH, you will land the following menu.
 
 <img src="adc-menu.png" alt="topology" width="300"/>
 
-Choose option #98 Shell (bash).
+Choose option #98 Shell (bash) to start a bash shell on the jumphost.
 ```
 What would you like to do? 98
 arista@ip-10-33-7-90:~$
