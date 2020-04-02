@@ -6,6 +6,7 @@ Prior to running these playbooks, Ansible must be upgraded to latest version to 
 
 <img src="arista-pw.png" alt="topology" width="300"/>
 
+To upgrade Ansible run the following PIP command:
 ```
 sudo pip install ansible --upgrade
 [sudo] password for arista: xxxxxxxx
