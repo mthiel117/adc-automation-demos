@@ -6,7 +6,7 @@ Connect to the 'Lab VM SSH' jumphost via SSH with username: 'arista' and your un
 
 <img src="arista-pw.png" alt="topology" width="300"/>
 
-After logging in via SSH, you will land the following menu.
+After logging in via SSH, you will land at the following menu.
 
 <img src="adc-menu.png" alt="topology" width="300"/>
 
