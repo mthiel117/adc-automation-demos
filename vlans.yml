@@ -1,0 +1,22 @@
+---
+# ansible-playbook vlans.yml
+- name: create vlans
+  gather_facts: no
+  hosts: localhost
+  vars:
+    # do not modify vlans 101-107
+    # used to create configlet ADCDEMO_VLANS
+    vlans:
+      - 101
+      - 102
+      - 103
+      - 104
+      - 105
+      - 106
+      - 107
+#  Add additonal vlans below
+
+  tasks:
+
+  - name: Create vlans
+    template: src=./templates/vlans.j2 dest=./configlets/VLANS.conf

@@ -1,0 +1,10 @@
+---
+# ansible-playbook ping.yml
+- name: Ping Hosts
+  gather_facts: no
+  hosts: DC1_FABRIC
+
+  tasks:
+
+  - name: Ping each host
+    ping:
