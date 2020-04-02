@@ -2,9 +2,32 @@
 
 As part of the ADC, the flexibility of managing an Arista Network with CloudVision and Common DevOps Toolsets (Ansible & Python) is demonstrated with example Ansible Playbooks and Python scripts.
 
-Prior to running these playbooks, Ansible must be upgraded to latest version to support Ansible Collections. Sudo password for user 'arista' can be found on Arista Test Drive Lab page.
+Connect to the 'Lab VM SSH' jumphost via SSH with username: 'arista' and your unique password noted on your lab instance below.
 
 <img src="arista-pw.png" alt="topology" width="300"/>
+
+On logging via SSH, you will land the following menu.
+
+<img src="adc-menu.png" alt="topology" width="300"/>
+
+Choose option #98 Shell (bash).
+```
+What would you like to do? 98
+arista@ip-10-33-7-90:~$
+```
+From here clone the ADC Automation Demos repository from Github
+```
+git clone https://github.com/mthiel117/adc-automation-demos.git
+cd adc-automation-demos
+```
+
+
+
+Prior to running these playbooks, Ansible must be upgraded to latest version to support Ansible Collections.
+
+
+Sudo password for user 'arista' can be found on Arista Test Drive Lab page.
+
 
 To upgrade Ansible run the following PIP command:
 ```
