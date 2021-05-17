@@ -2,9 +2,13 @@ all:
   children:
     AVD_LAB:
       children:
-        CVP:
+        CVP_SERVERS:
           hosts:
-            CVP-1:
+            cvp:
+              # Update based on Lab Topology
+              ansible_host: thieltesting2-1-41bfeed2.topo.testdrive.arista.com
+              ansible_user: arista
+              ansible_password: aristaedf8
 # DC1 Fabric
         DC1_FABRIC:
           children:
@@ -17,19 +21,17 @@ all:
             DC1_LEAFS:
                 hosts:
                   leaf1:
-                    ansible_host: 192.168.0.14
+                    ansible_host: 192.168.0.12
                   leaf2:
-                    ansible_host: 192.168.0.15
+                    ansible_host: 192.168.0.13
                   leaf3:
-                    ansible_host: 192.168.0.16
+                    ansible_host: 192.168.0.14
                   leaf4:
+                    ansible_host: 192.168.0.15
+            DC1_HOST:
+                hosts:
+                  host1:
+                    ansible_host: 192.168.0.16
+                  host2:
                     ansible_host: 192.168.0.17
-          vars:
-            ansible_connection: httpapi
-            ansible_network_os: eos
-            ansible_user: arista
-            ansible_ssh_pass: arista
-            ansible_become: yes
-            ansible_become_method: enable
-            ansible_httpapi_use_ssl: true
-            ansible_httpapi_validate_certs: false
+

@@ -1,3 +1,0 @@
-configlets_prefix_var: "ADC_CVP_DEMO"
-configlet_dir_var: "configlets/"
-configlet_file_extension: "conf"

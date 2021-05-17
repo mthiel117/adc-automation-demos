@@ -1,0 +1,25 @@
+###############################################################
+# Device Inventory:
+# Add new section for each device you want to manage configlets
+# Required fields:
+#  Key:
+#    name:
+#    configlets:
+#    parentContainerName:
+#
+# Note: You do no need to list configlets that are inherited
+#       from a container the device is attached to.  CVP will
+#       merge them together
+###############################################################
+
+CVP_DEVICES:
+  - fqdn: host1.atd.lab
+    parentContainerName: Hosts
+    configlets:
+      - ATDDEMO_ALIASES
+      - ATDDEMO_VLANS
+  - fqdn: host2.atd.lab
+    parentContainerName: Hosts
+    configlets:
+      - ATDDEMO_ALIASES
+      # - ATDDEMO_VLANS
