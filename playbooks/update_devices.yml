@@ -25,6 +25,7 @@
         - name Ten
         - vlan 20
         - name Twenty
+        before: no vlan 10,20
 
     - name: Add VLANs to Switches by Jinja Template with Dictionary
       eos_config:
