@@ -1,6 +1,6 @@
 ---
 - name: Update Configlets
-  hosts: leaf1
+  hosts: DC1_LEAFS
   gather_facts: no
 
 # https://ansible-arista-howto.readthedocs.io/en/latest/EOS_CONFIG.html#configure-arista-eos-with-ansible
