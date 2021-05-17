@@ -20,5 +20,5 @@
 
     - name: Add VLANs to Switches by Jinja Template with Dictionary
       eos_config:
-        src: "templates/vlan-template-config.j2"
+        src: "../templates/vlan-template-config.j2"
 
