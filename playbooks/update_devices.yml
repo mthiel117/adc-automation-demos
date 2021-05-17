@@ -3,6 +3,8 @@
   hosts: host1
   gather_facts: no
 
+# https://ansible-arista-howto.readthedocs.io/en/latest/EOS_CONFIG.html#configure-arista-eos-with-ansible
+
   tasks:
 
     - name: Add Access-List to Switches
@@ -16,11 +18,15 @@
         before: no ip access-list test
         replace: block
 
-    - name: Add VLANs to Switches
+    - name: Add VLANs to Switches Line by Line
       eos_config:
         lines:
         - vlan 10
         - name Ten
         - vlan 20
         - name Twenty
-  
+
+    - name: Add VLANs to Switches by Jinja Template with Dictionary
+      eos_config:
+        src: "templates/vlan-template-config.j2
+
