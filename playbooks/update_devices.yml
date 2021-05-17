@@ -5,8 +5,8 @@
 
   tasks:
 
-    - name: Add VLANs to Switches
-      arista.eos.eos_config:
+    - name: Add Access-List to Switches
+      eos_config:
         lines:
         - 10 permit ip host 192.0.2.1 any log
         - 20 permit ip host 192.0.2.2 any log
@@ -15,3 +15,12 @@
         parents: ip access-list test
         before: no ip access-list test
         replace: block
+
+    - name: Add VLANs to Switches
+      eos_config:
+        lines:
+        - vlan 10
+        - name Ten
+        - vlan 20
+        - name Twenty
+  
