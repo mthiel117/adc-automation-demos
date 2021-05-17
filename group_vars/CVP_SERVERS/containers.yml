@@ -4,8 +4,7 @@
 # Add new section for each container you want to manage configlets
 # Required fields:
 #  Key:
-#    name:
-#    parent_container:
+#    parentContainerName: Tenant
 #    configlets: [list]
 #
 ###############################################################
@@ -15,7 +14,6 @@ CVP_CONTAINERS:
     parentContainerName: Tenant
     configlets:
       - ATDDEMO_ALIASES
-      - ATDDEMO_VLANS
 
   # COMPANY_XYZ:
   #   parentContainerName: Tenant

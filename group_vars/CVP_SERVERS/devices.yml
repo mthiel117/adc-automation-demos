@@ -17,9 +17,7 @@ CVP_DEVICES:
     parentContainerName: Hosts
     configlets:
       - ATDDEMO_ALIASES
-      - ATDDEMO_VLANS
   - fqdn: host2.atd.lab
     parentContainerName: Hosts
     configlets:
       - ATDDEMO_ALIASES
-      # - ATDDEMO_VLANS
