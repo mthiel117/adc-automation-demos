@@ -7,8 +7,8 @@ all:
             cvp:
               # Update based on Lab Topology
               ansible_host: thieltesting2-1-41bfeed2.topo.testdrive.arista.com
-              ansible_user: arista
-              ansible_password: aristaedf8
+              # ansible_user: arista
+              # ansible_password: aristaedf8
 # DC1 Fabric
         DC1_FABRIC:
           children:
